@@ -1,0 +1,28 @@
+{
+  "name": "protractor_workshop_2017",
+  "version": "1.0.0",
+  "description": "This is a Workshop about protactor",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor protractor.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorhugojt/protractor-workshop-2017.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "protractor"
+  ],
+  "author": "Victor Hugo Jimenez <vjimenezt@psl.com.co> victorhugojt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorhugojt/protractor-workshop-2017/issues"
+  },
+  "homepage": "https://github.com/victorhugojt/protractor-workshop-2017#readme",
+  "dependencies": {
+    "protractor": "^5.3.0"
+  }
+}
