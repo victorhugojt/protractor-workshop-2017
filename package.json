@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "This is a Workshop about protactor",
   "main": "index.js",
-  "clean": "rm -rf dist",
-  "prebuild": "npm run clean",
-  "build": "tsc",
-  "test": "npm run build && protractor dist/protractor/config.ts",
-  "scripts": {
-    "test": "protractor ./protractor/config.ts"
+  "scripts": {    
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "test": "npm run build && protractor dist/protractor/config.js"
   },
   "repository": {
     "type": "git",
