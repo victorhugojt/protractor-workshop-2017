@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "This is a Workshop about protactor",
   "main": "index.js",
+  "clean": "rm -rf dist",
+  "prebuild": "npm run clean",
+  "build": "tsc",
+  "test": "npm run build && protractor dist/protractor/config.js",
   "scripts": {
     "test": "protractor protractor.config.js"
   },
@@ -24,5 +28,9 @@
   "homepage": "https://github.com/victorhugojt/protractor-workshop-2017#readme",
   "dependencies": {
     "protractor": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/jasminewd2": "^2.0.3",
+    "typescript": "^2.7.2"
   }
 }
