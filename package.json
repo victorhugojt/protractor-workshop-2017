@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "This is a Workshop about protactor",
   "main": "index.js",
-  "scripts": {    
+  "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
     "build": "tsc",
     "test:local": "npm run build && protractor dist/protractor/config.js",
-    "test:headless": "npm run build && protractor dist/protractor/headless.config.js"
+    "test:headless": "npm run build && protractor dist/protractor/headless.config.js",
+    "test": "npm run test:headless",
+    "postinstall": "webdriver-manager update --gecko false"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "@types/jasminewd2": "^2.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
     "typescript": "^2.7.2"
   }
 }
