@@ -1,4 +1,4 @@
-﻿import { browser, Config } from 'protractor';
+import { browser, Config } from 'protractor';
 import { reporter }   from './helpers/reporter';
 
 export const config: Config = {
@@ -16,4 +16,4 @@ export const config: Config = {
     browser.ignoreSynchronization = true;
     reporter();
   }
-}
+};
