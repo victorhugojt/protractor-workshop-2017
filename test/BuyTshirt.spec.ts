@@ -1,10 +1,10 @@
 import { $, browser } from 'protractor';
-import { MenuContentPage } from '../src/page';
-import { AddProductModal } from '../src/page';
+import { MenuContentPage, AddProductModalPage, CartButtonPage } from '../src/page';
 
 describe('Buy a t-shirt', () => {
   const menuContentPage: MenuContentPage = new MenuContentPage();
-  const addProductModalPage: AddProductModal = new AddProductModal();
+  const addProductModalPage: AddProductModalPage = new AddProductModalPage();
+  const cartButtonPage: CartButtonPage = new CartButtonPage();
 
   beforeEach(() => {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
@@ -15,9 +15,12 @@ describe('Buy a t-shirt', () => {
     await(browser.sleep(3000));
     await menuContentPage.goToTShirtMenu();
     await
-    await addProductModalPage.goToAddProductModal();    
     await(browser.sleep(3000));
-    await $('#add_to_cart > button > span').click();
+    await addProductModalPage.goToAddProductModal();    
+    await
+    await(browser.sleep(3000));
+    await cartButtonPage.goToCartButtonMenu();
+    await
     await(browser.sleep(3000));
     await $('[style*="display: block;"] .button-container > a').click();
     await(browser.sleep(3000));
